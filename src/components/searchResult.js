@@ -17,7 +17,7 @@ function SearchResult(props) {
             .then(
                 (result) => {
                     setIsLoaded(true);
-                    setItems(result.items);
+                    setItems(result ? result.items : []);
                 },
                 // Note: it's important to handle errors here
                 // instead of a catch() block so that we don't swallow
@@ -35,7 +35,7 @@ function SearchResult(props) {
     } else {
         return (
             <div className="Container">
-                {items.map(item => (
+                {items ? items.map(item => (
                     <div className="ItemContainer">
                         <img src={item.pagemap.cse_image[0].src} className="Thumbnail"></img>
                         <div className="TextGrid">
@@ -44,7 +44,7 @@ function SearchResult(props) {
                             {item.snippet}
                         </div>
                     </div>
-                ))}
+                )) : <></>}
             </div>
         );
     }
