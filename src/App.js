@@ -1,25 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { InputGroup, Input, Button } from 'reactstrap';
+import { FiSearch } from 'react-icons/fi';
+import SearchResult from './components/searchResult';
 import './App.css';
 
+
 function App() {
+  const [isButtonClicked, setButtonClicked] = useState(false);
+  const [searchText, setSearchText] = useState(null);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>
+      <h2 className="Heading PageName">Oh.search</h2>
+      <div className="SearchBar">
+        <InputGroup className="MainInput">
+          <Button onClick={() => setButtonClicked(true)} className="SearchButton"><FiSearch className="SearchIcon" /></Button>
+          <Input placeholder="search" className="TextInput" id="searchBar" onChange={(event) => setSearchText(event.target.value)} />
+        </InputGroup>
+      </div>
+      {
+        isButtonClicked ? <SearchResult searchTerm={searchText} /> : <></>
+      }
+    </div >
   );
 }
 

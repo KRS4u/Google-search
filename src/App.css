@@ -36,3 +36,58 @@
     transform: rotate(360deg);
   }
 }
+
+.Heading{
+  color: coral;
+}
+.PageName{
+  margin-left: 10%;
+  float: left;
+}
+.SearchBar{
+  margin-top: 5%;
+  margin-left: 40%;
+}
+.Input {
+  margin-left: 10px;
+}
+.MainInput{
+  height: 70px;
+  width: 400px;
+  border: black;
+  border-style: solid;
+}
+.SearchButton{
+  border-style: none;
+  background: white;
+}
+.SearchButton:hover{
+  cursor: pointer;
+}
+.SearchButton:focus{
+  border: white;
+  border-style: none;
+  outline: 0px solid transparent;
+}
+.SearchIcon{
+  width: 50px;
+  height: 30px;
+  margin-top: 5px;
+}
+.TextInput{
+  width: 300px;
+  height: 50px;
+  border-style: none;
+  font-size: large;
+  padding: 5px;
+}
+.TextInput:focus{
+  border: white;
+  border-style: none;
+  outline: 0px solid transparent;
+}
+.TextInput:ac{
+  border: white;
+  border-style: none;
+  outline: 0px solid transparent;
+}

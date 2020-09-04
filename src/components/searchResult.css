@@ -1,0 +1,20 @@
+.Thumbnail{
+    height: 100px;
+    width: 100px;
+    float: left;
+    margin-right: 50px;
+    border-radius: 5px;
+}
+.Container{
+    margin-left: 20%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+.ItemContainer{
+    margin-top: 100px;
+}
+.TextGrid{
+    width: 80%;
+    height: 100px;
+    padding: 1px;
+}
