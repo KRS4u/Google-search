@@ -27,7 +27,7 @@ function SearchResult(props) {
                     setError(error);
                 }
             )
-    }, []);
+    }, [searchTerm]);
     if (error) {
         return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
