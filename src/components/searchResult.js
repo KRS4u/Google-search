@@ -37,7 +37,7 @@ function SearchResult(props) {
             <div className="Container">
                 {items ? items.map(item => (
                     <div className="ItemContainer">
-                        <img src={item.pagemap.cse_image[0].src} className="Thumbnail"></img>
+                        <img src={item.pagemap.cse_thumbnail[0].src} className="Thumbnail" alt="item"></img>
                         <div className="TextGrid">
                             {item.link}
                             <h3>{item.title}</h3>
